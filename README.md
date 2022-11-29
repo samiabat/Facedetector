@@ -1,24 +1,40 @@
-# face-detection
 
-## Project setup
-```
-npm install
-```
+## Title Of The Project
+<pre>
+	Face Detector
+</pre>
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Group Members
 
-### Compiles and minifies for production
-```
-npm run build
-```
+<pre>
+	|------------------------------------------------------------|
+	|     Name                 |     ID            |     Dpt |
+	|--------------------------|-------------------|-------------|
+	|  1. Samuel Abatneh       |   UGR/7229/12     |         AI  |
+	|  2. Feven                |   **********      |         AI  |
+	|  3. Simon ******         |   **********      |         AI  |
+	|------------------------------------------------------------|
 
-### Lints and fixes files
-```
-npm run lint
-```
+</pre>
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+ 
+## Languages And Frameworks Used
+
+<pre>
+	1. Vue as front end
+	2. Django as back-end
+	3. HTML, CSS, and Javascript
+	4. MySQL database as a backend
+</pre>
+
+
+## Some tips to run the back-end part
+<pre>
+	1, clone the project
+	2, open the install npm
+	3, run npm install
+	4, run npm run serve
+  
+</pre>
+	
