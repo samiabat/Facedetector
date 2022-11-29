@@ -10,6 +10,7 @@
           <v-btn color="red" block height="60">
             Take Camera
           </v-btn>
+          <h3>OR</h3>
           <v-btn color="blue" block class="mt-5" height="60">
             Upload Photo
           </v-btn>
