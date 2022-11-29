@@ -1,149 +1,109 @@
 <template>
-  <v-container>
-    <v-row class="text-center">
-      <v-col cols="12">
-        <v-img
-          :src="require('../assets/logo.svg')"
-          class="my-3"
-          contain
-          height="200"
-        />
-      </v-col>
+  <v-row>
+    <v-col cols="12" md="5">
+      <v-card color="grey">
+        <pre>
 
-      <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mb-3">
-          Welcome to the Vuetify 3 Beta
-        </h1>
+        </pre>
+        <v-img :src="require('../assets/upload.png')" class="ma-md-12 ma-8" contain height="300" />
+        <v-form align="center" class="pa-md-16 pa-8">
+          <v-btn color="red" block height="60">
+            Take Camera
+          </v-btn>
+          <v-btn color="blue" block class="mt-5" height="60">
+            Upload Photo
+          </v-btn>
+          <pre>
+            </pre>
+          <hr>
+          <pre>
+            </pre>
+          <v-btn color="green" block class="mt-5" height="60">
+            Find Person
+          </v-btn>
+        </v-form>
+      </v-card>
+    </v-col>
+    <v-col cols="12" md="7">
+      <div color="F5F5F5" class="pa-md-16 pa-8">
+        <h2 class="text-center">
+          Well come to Face detector <br/>This is Jhon doe. 
+        </h2>
+        <pre>
 
 
-        <p class="subheading font-weight-regular">
-          For help and collaboration with other Vuetify developers,
-          <br>please join our online
-          <a
-            href="https://community.vuetifyjs.com"
-            target="_blank"
-          >Discord Community</a>
+        </pre>
+        <h2>
+          Who is Jhon doe?
+        </h2>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+          make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+          typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+          sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+          PageMaker including versions of Lorem Ipsum <i style="color:blue"><strong>More...</strong></i>
         </p>
-      </v-col>
+        <pre>
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-5">
-          What's next?
+        </pre>
+        <h2>
+          Other similarities
         </h2>
+        <ul>
+          <li>Abebe Kebede</li>
+          <li>Alemu Ayele</li>
+          <li>Jhon smith</li>
+          <i style="color:blue"><strong>More...</strong></i>
+        </ul>
+      </div>
+    </v-col>
+    <v-footer dark padless>
+      <v-card flat tile class="indigo lighten-1 white--text text-center">
+        <v-card-text>
+          <v-btn v-for="icon in icons" :key="icon" class="mx-4 white--text" icon>
+            <v-icon size="24px">
+              {{ icon }}
+            </v-icon>
+          </v-btn>
+        </v-card-text>
 
-        <v-row justify="center">
-          <a
-            v-for="(next, i) in whatsNext"
-            :key="i"
-            :href="next.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ next.text }}
-          </a>
-        </v-row>
-      </v-col>
+        <v-card-text class="white--text pt-0">
+          Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent
+          ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet
+          dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum
+          ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci
+          varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        </v-card-text>
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-5">
-          Important Links
-        </h2>
+        <v-divider></v-divider>
 
-        <v-row justify="center">
-          <a
-            v-for="(link, i) in importantLinks"
-            :key="i"
-            :href="link.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ link.text }}
-          </a>
-        </v-row>
-      </v-col>
+        <v-card-text class="white--text">
+          {{ new Date().getFullYear() }} — <strong>FACE DETECTOR</strong>
+        </v-card-text>
+      </v-card>
+    </v-footer>
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-5">
-          Ecosystem
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ eco.text }}
-          </a>
-        </v-row>
-      </v-col>
-    </v-row>
-  </v-container>
+  </v-row>
 </template>
 
 <script>
 
 export default {
   name: 'HelloWorld',
-
-  data: () => ({
-    ecosystem: [
-      {
-        text: 'vuetify-loader',
-        href: 'https://github.com/vuetifyjs/vuetify-loader/tree/next',
-      },
-      {
-        text: 'github',
-        href: 'https://github.com/vuetifyjs/vuetify/tree/next',
-      },
-      {
-        text: 'awesome-vuetify',
-        href: 'https://github.com/vuetifyjs/awesome-vuetify',
-      },
-    ],
-    importantLinks: [
-      {
-        text: 'Chat',
-        href: 'https://community.vuetifyjs.com',
-      },
-      {
-        text: 'Made with Vuetify',
-        href: 'https://madewithvuejs.com/vuetify',
-      },
-      {
-        text: 'Twitter',
-        href: 'https://twitter.com/vuetifyjs',
-      },
-      {
-        text: 'Articles',
-        href: 'https://medium.com/vuetify',
-      },
-    ],
-    whatsNext: [
-      {
-        text: 'Explore components',
-        href: 'https://vuetifyjs.com',
-      },
-      {
-        text: 'Roadmap',
-        href: 'https://vuetifyjs.com/introduction/roadmap/',
-      },
-      {
-        text: 'Frequently Asked Questions',
-        href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions',
-      },
-    ],
-  }),
+  data() {
+    return {
+      drawer: null,
+      items: [
+        { title: 'Home', icon: 'mdi-view-dashboard' },
+        { title: 'About', icon: 'mdi-forum' },
+      ],
+      icons: [
+        'mdi-facebook',
+        'mdi-twitter',
+        'mdi-instagram',
+      ],
+    }
+  },
 }
 </script>
