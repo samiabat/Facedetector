@@ -29,7 +29,7 @@
 </pre>
 
 
-## Some tips to run the back-end part
+## Some tips to run 
 <pre>
 	1, clone the project
 	2, open the install npm
