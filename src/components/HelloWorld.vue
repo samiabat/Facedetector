@@ -5,7 +5,7 @@
         <pre>
 
         </pre>
-        <v-img :src="require('../assets/upload.png')" class="ma-md-12 ma-8" contain height="300" />
+        <v-img :src="require('../assets/upload.png')" class="ma-md-12 ma-8" contain height="260" />
         <v-form align="center" class="pa-md-16 pa-8">
           <v-btn color="red" block height="60">
             Take Camera
