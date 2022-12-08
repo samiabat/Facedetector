@@ -7,11 +7,11 @@
         </pre>
         <v-img :src="require('../assets/upload.png')" class="ma-md-12 ma-8" contain height="260" />
         <v-form align="center" class="pa-md-16 pa-8">
-          <v-btn color="red" block height="60">
+          <v-btn @click="(this.show = !this.show)" color="red" block height="60">
             Take Camera
           </v-btn>
           <h3>OR</h3>
-          <v-btn color="blue" block class="mt-5" height="60">
+          <v-btn @click="$store.dispatch('fetchUsers')" color="blue" block class="mt-5" height="60">
             Upload Photo
           </v-btn>
           <pre>
@@ -28,8 +28,11 @@
     <v-col cols="12" md="7">
       <div color="F5F5F5" class="pa-md-16 pa-8">
         <h2 class="text-center">
-          Well come to Face detector <br/>This is Jhon doe. 
+          Well come to Face detector <br />This is Jhon doe.
         </h2>
+        <p v-if="this.show" >
+          {{$store.state.users}}
+        </p>
         <pre>
 
 
@@ -90,8 +93,10 @@
 
 <script>
 
+
 export default {
   name: 'HelloWorld',
+  
   data() {
     return {
       drawer: null,
@@ -104,6 +109,8 @@ export default {
         'mdi-twitter',
         'mdi-instagram',
       ],
+      show: false,
+      datas: [],
     }
   },
 }
