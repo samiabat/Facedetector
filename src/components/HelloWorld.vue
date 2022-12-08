@@ -19,7 +19,7 @@
           <hr>
           <pre>
             </pre>
-          <v-btn color="green" block class="mt-5" height="60">
+          <v-btn @click="(this.show = !this.show)" color="green" block class="mt-5" height="60">
             Find Person
           </v-btn>
         </v-form>

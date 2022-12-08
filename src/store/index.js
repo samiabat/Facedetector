@@ -11,7 +11,6 @@ export default createStore({
     setUsers: (state, users) => (state.users = users)
   },
   actions: {
-
     async fetchUsers({ commit }) {
       try {
         const users = await axios.get(`https://face-detect.up.railway.app/users`)
